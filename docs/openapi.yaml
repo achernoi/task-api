@@ -16,6 +16,13 @@ paths:
   /tasks:
     get:
       summary: List all tasks
+      parameters:
+        - name: completed
+          in: query
+          description: Filter by task completion (true or false)
+          required: false 
+          schema:
+            type: string 
       tags:
         - Tasks
       responses:
